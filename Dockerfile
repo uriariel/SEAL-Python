@@ -32,5 +32,8 @@ WORKDIR /app/src
 RUN python3 setup.py build_ext -i
 RUN python3 setup.py install
 
+RUN pip3 install setuptools
+RUN pip3 install sklearn pandas matplotlib
+
 # Clean-up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

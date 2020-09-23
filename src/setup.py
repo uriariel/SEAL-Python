@@ -19,7 +19,7 @@ if(platform.system() == "Windows"):
     extra_objects[0] = '../SEAL/native/lib/x64/Release/seal.lib'
 
 if not os.path.exists(extra_objects[0]):
-    print('Can not find the seal lib')
+    print('Can\'t find SEAL lib')
     exit(1)
 
 ext_modules = [
